@@ -88,6 +88,20 @@ public class Calculator {
                                 B = displayLabel.getText();
                                 double numA = Double.parseDouble(A);
                                 double numB = Double.parseDouble(B);
+
+                                if (operator == "+"){
+                                    displayLabel.setText(removeZeroDecimal(numA + numB));
+                                }
+                                else if (operator == "-"){
+                                    displayLabel.setText(removeZeroDecimal(numA - numB));
+                                }
+                                else if (operator == "×"){
+                                    displayLabel.setText(removeZeroDecimal(numA * numB));
+                                }
+                                else if (operator.equals("÷")) {
+                                    displayLabel.setText(removeZeroDecimal(numA / numB));
+                                }
+                                clearAll();
                             }
 
                         }
